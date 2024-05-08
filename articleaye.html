@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>morality</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: whitesmoke;
+        color: #222;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 1200px; /* Increased max-width for better layout */
+        margin: 0 auto;
+        padding: 20px;
+        display: flex; /* Added flex display */
+        justify-content: center; /* Centering content horizontally */
+        align-items: flex-start; /* Aligning items to the top */
+      }
+
+      .top {
+        background-color: #110904;
+        color: #e1b3b3;
+        padding: 40px;
+        margin-bottom: 40px;
+        width: 100%;
+      }
+
+      .website-name {
+        font-size: 5rem;
+        margin-top: 20px;
+        text-transform: lowercase;
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px;
+        font-family: sans-serif;
+        font-weight: 1;
+      }
+      .website-name a {
+        color: #e1b3b3;
+        text-decoration: none;
+        font-family: serif;
+      }
+
+      .website-name:hover {
+        /* font-style: italic; */
+        transform: scale(1.05);
+      }
+
+      .menu {
+        margin-top: 20px;
+        padding: 5px;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 10px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        transition: color 0.3s ease;
+
+        padding: 5px;
+      }
+
+      .menu a:hover {
+        /* transform: scale(1.05); */
+        color: #b8cadd;
+      }
+      .main-content {
+        border: 1px solid white;
+        /* border-radius: 4%; */
+        width: 70%;
+        padding: 50px;
+        margin: 50px auto; /* Centering the main-content section */
+        box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+        /* transition: all 0.5s; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        font-weight: lighter;
+        color: black;
+        font-size: larger;
+      }
+      .main-content p {
+        font-size: 15px;
+      }
+      .main-content:hover {
+        border: 1px solid white;
+        /* transform: scale(1.05); */
+      }
+      /* .main-content:active {
+        transform: scale(0.95) rotateZ(1.7deg);
+      } */
+      .work {
+        text-align: left;
+        padding: 30px;
+      }
+      .heart-liked {
+        color: red !important;
+      }
+      .free-toes {
+        background-color: #282828;
+        color: white;
+
+        padding: 30px;
+      }
+      .free-toes a {
+        color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="container-fluid top">
+        <h1 class="website-name">
+          <a href="newtrial.html" style="margin-bottom: 0">sarahtonin</a>
+        </h1>
+        <h6 style="color: whitesmoke">
+          where i talk in circles and you're at the centre <3
+        </h6>
+        <!-- <div class="menu">
+          <a href="sponge.html">Spongebob</a>
+          <a href="poem.html">Poem</a>
+        </div> -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse"
+              id="navbarNav"
+              style="
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+              "
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="sponge.html">SpongeBob</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="poem.html">Poem</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <article class="main-content">
+        <blockquote class="blockquote">
+          <h2>Yoyo Mama Jokes and Objective Morality</h2>
+          <footer class="blockquote-footer">Sarah Saiyed</footer>
+        </blockquote>
+        <div class="work">
+          <p>
+            I have no professional qualifications to write an essay about
+            objective morality. There is no philosophy degree in my pocket, nor
+            all that many non-fiction books on my shelf. However, just hear me
+            out. No, hold on, I’m sure I can come up with a better reason for
+            you to stay for this essay. *subtly offers a large sum of money.*
+            (I'm an engineering student with no source of income)
+          </p>
+          <p>
+            <strong>Anyways</strong>, my knowledge of objective morality comes
+            from contemporary fiction, tv shows, Reddit threads, and most
+            importantly, cue the confetti cannons- personal experience. (Of
+            course, I also did research on the subject while writing this,
+            references will be credited at the end.)
+          </p>
+          <p>
+            To understand objective morality, allow me to copy and paste the
+            definition of morality from the very helpful
+            <a
+              href="https://www.betterhelp.com/advice/morality/what-is-objective-morality-what-can-it-teach-us/"
+              target="_blank"
+              >www.betterhelp.com</a
+            >
+            “morality is often a belief about what is wrong and right regarding
+            our behavior, beliefs, and words.”
+
+            <br />
+
+            Morality is what is believed to be right or wrong- stealing is
+            <em>bad</em>, helping others is <em>good</em>, your mom is
+            <em>not</em> so big that when she walks past the TV you miss entire
+            seasons of a show, etc.
+            <br />
+            <br />
+
+            <strong><em>Objective morality</em></strong> takes this a step
+            further to say- something can <em>only ever</em> be right or wrong.
+            It sits on the cushion of absolute morality. Stealing is
+            <em>always</em> bad, helping others is <em>always</em> good and your
+            mother should <em>never</em> be subject to criticisms about her
+            size. But what if- the person stealing is a poor boy with no other
+            means of obtaining sustenance? Or maybe, the person you’re
+            <em>helping</em> is a bank robber? Maybe, your mom <em>is</em> obese
+            and requires medical attention (not in the form of yo mama jokes,
+            but you get the point I'm making-). Objective morality leaves no
+            room for gray areas and no room for white lies.
+            <br />
+            <br />
+
+            You might’ve heard the term
+            <strong><em>‘morally gray’</em></strong> thrown around in pop
+            culture. Morally gray actions are those we have difficulty
+            classifying as right or wrong because they may be both and neither
+            at the same time. As ‘Better Help’ describes, “Lying isn't often
+            considered a moral action. However, there could be instances where
+            lying would cause the least harm and may feel just.“
+            <br />
+            <br />
+            Characters in pop culture are often described as morally gray when
+            their actions have us ask, ‘Does the end justify the means?’. While
+            that question is a whole conversation in itself, an example of this
+            would be Eren Yaeger. (AOT SPOILERS AHEAD || SKIP TO THE NEXT
+            PARAGRAPH) To save his people, Yaeger had to bring about mass
+            genocide. His actions were the reason the conflict in his story
+            ended but at the cost of billions of innocent lives. Did the end
+            (end of war and the salvation of his people) justify the
+            means(genocide)? Were his actions ‘absolutely good’ because he just
+            wanted to save people? Or, was he ‘absolutely bad’ because he killed
+            people in the process? Hence the term, morally gray.
+            <br />
+            <br />
+            Objective morality paints a very black-and-white picture- either
+            <em>right</em> or <em>wrong</em>, no gray. This immediately deters
+            me because, of course, things can’t always be as straightforward as
+            that. Objective morality holds no room for context, history, or
+            perspective. It’s a very utopian idea- and there are theories that
+            if morality is objective, we can bring out the
+            <em>ideal</em> society.
+            <br />
+            <br />
+
+            In a society where morality is objective- yo mama jokes are
+            <em>always</em>
+            bad, no matter how funny they may be; you cannot tell any lies to
+            spare someone from a hurtful truth, and <em>helping</em> people (rob
+            banks) lands you straight into heaven. Lit, innit?
+            <br />
+            <br />
+
+            It sounds dandy until you realize this means the requirement for
+            action will never justify the action, nor will the intention with
+            which it is performed. For example, murder would be murder,
+            regardless of whether it was committed with malicious intent or as
+            an act of self-defense.
+            <br />
+            <br />
+
+            If not objective morality, then what-
+            <em><strong>subjective morality?</strong></em>
+            Subjective morality should then mean that we, as individuals, create
+            our own ‘right’ and ‘wrong’; we decide what goes and what doesn't.
+            As Better Help puts it, “Subjective morality says morals are
+            human-made and can vary from person to person.”
+            <br />
+            <br />
+
+            However, if everyone had their morality with no consensus, we would
+            live in utter chaos. I say I’m a fantastic person because I helped
+            someone rob a bank, you say I’m a shitty person because they robbed
+            other people’s money, and the court of law would, of course, would
+            not exist. Therefore, it is up to individuals to resolve the
+            disputes- but my verdict says I’m innocent, and yours says I’m
+            guilty- but neither of us is right nor wrong because, by subjective
+            morality, both of us are entitled to our values. This means that I,
+            nor anyone committing a crime and claiming to not be guilty, will
+            ever be guilty of anything at all.
+            <br />
+            <br />
+
+            To solve this predicament, it seems logical to say, ‘Hey who’s got
+            the best moral compass? Follow in their footsteps.’ Sounds plausible
+            when you first think of it, but- this person (Karl Wray, Carlisle,
+            Cumbria) gives some very bitter food for thought, “Certainly many
+            people have attempted to invent their own morality and then impose
+            it on others, for instance, Stalin, Hitler, Mao Zedong, and Pol Pot.
+            And look what they created – a new Humanity, a new Society! Does
+            anyone fancy living in their morally subjective worlds? Each led to
+            inhumanity and madness.”
+            <br />
+            <br />
+
+            Where does this bring us? Back to square one? If objective morality
+            is unreasonable and subjective morality leads to too many
+            disparities, can we make yo mama jokes?
+          </p>
+        </div>
+        <i
+          class="fa fa-heart"
+          id="heart"
+          style="font-size: 24px; color: pink; cursor: pointer"
+        >
+        </i
+        >liked it? click here!
+        <script>
+          const heartIcon = document.getElementById("heart");
+
+          heartIcon.addEventListener("click", function () {
+            this.classList.toggle("heart-liked");
+          });
+        </script>
+      </article>
+      <!-- <nav>
+        <p><a href="index.html">back to main page</a></p>
+        <p><a href="#">top of page?</a></p>
+      </nav> -->
+      <ul class="pager">
+          
+        <li><a href="newtrial.html">Previous</a></li>
+          
+        <li><a href="#">Next</a></li>
+      </ul>
+      <footer class="free-toes">
+        <div
+          class="socials"
+          style="display: flex; flex-direction: row; justify-content: center"
+        >
+          <a
+            href="https://www.instagram.com/bothered.png/"
+            target="_blank"
+            style="
+              color: whitesmoke;
+              text-decoration: none;
+              font-size: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 30px;
+            "
+          >
+            <i
+              class="fa fa-instagram"
+              style="font-size: 20px; margin-right: 5px"
+            ></i>
+            @bothered.png
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sarah-saiyed-805bb3250/"
+            target="_blank"
+            style="
+              color: whitesmoke;
+              text-decoration: none;
+              font-size: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 30px;
+            "
+          >
+            <i
+              class="fa fa-linkedin-square"
+              style="font-size: 20px; margin-right: 5px"
+            ></i>
+            Sarah Saiyed
+          </a>
+        </div>
+        <p>Copyright &copy; 2024 by sarahtonin</p>
+      </footer>
+    </div>
+  </body>
+</html>

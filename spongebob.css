@@ -1,0 +1,137 @@
+* {
+  font-family: sans-serif;
+  color: black;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  border: 5px solid black;
+  /* padding: 30px 0; */
+  width: 825px;
+  margin: 50px auto;
+  position: relative;
+}
+.website-name {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  padding: 20px 0;
+  font-weight: bold;
+  background-color: aliceblue;
+}
+.cost {
+  text-transform: uppercase;
+  color: pink;
+  font-size: 25px;
+}
+.tc {
+  color: rgba(101, 101, 101, 10);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+.desc {
+  margin-top: 30px;
+}
+.person {
+  margin-top: 30px;
+}
+.more:hover,
+.more:active {
+  text-decoration: none;
+}
+
+li {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.nohire {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 20px 0;
+  border: 0;
+  margin-top: 30px;
+}
+.nohire a
+/* button a:visited  */ {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  padding: auto;
+  margin-top: 30px;
+}
+
+.nohire a:hover {
+  background-color: white;
+  color: black;
+}
+.hire {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  background-color: brown;
+  padding: 10px;
+  border: 0;
+}
+.hire a:link {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+}
+.hire a:visited {
+  text-decoration: none;
+  color: white;
+}
+.outer {
+  margin: 30px;
+}
+.red {
+  background-color: red;
+  padding: 10px 10px;
+  margin-top: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.black {
+  background-color: black;
+  padding: 10px 10px;
+  margin-top: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.pink {
+  background-color: pink;
+  padding: 10px 10px;
+  margin-top: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.blue {
+  background-color: blue;
+  padding: 10px 10px;
+  margin-top: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.green {
+  background-color: green;
+  padding: 10px 10px;
+  margin-top: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}

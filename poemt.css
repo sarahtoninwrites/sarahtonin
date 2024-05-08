@@ -1,0 +1,11 @@
+h1 {
+  color: brown;
+  font-family: serif;
+  font-size: 50;
+  font-style: italic;
+}
+p {
+  color: black;
+  font-family: serif;
+  font-size: 40;
+}
