@@ -1,0 +1,105 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: whitesmoke;
+  color: #222;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px; /* Increased max-width for better layout */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex; /* Added flex display */
+  justify-content: center; /* Centering content horizontally */
+  align-items: flex-start; /* Aligning items to the top */
+}
+
+.top {
+  background-color: #110904;
+  color: #e1b3b3;
+  padding: 40px;
+  margin:0px;
+  margin-bottom: 40px;
+
+  width: 100%;
+}
+
+.website-name {
+  font-size: 5rem;
+  margin-top: 20px;
+  text-transform: lowercase;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: 1;
+}
+.website-name a {
+  color: #e1b3b3;
+  text-decoration: none;
+  font-family: serif;
+}
+
+.website-name a:hover {
+  color: #e1b3b3;
+  text-decoration: none;
+  font-family: serif;
+}
+.website-name:hover {
+  /* font-style: italic; */
+  text-decoration: none;
+  color: #e1b3b3;
+
+  transform: scale(1.05);
+}
+.menu {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: color 0.3s ease;
+
+  padding: 5px;
+}
+
+.menu a:hover {
+  transform: scale(1.05);
+
+}
+
+.main-body {
+  margin-top: 150px;
+  margin-bottom: 40px;
+  display: flex; /* Added flex display */
+  justify-content: space-between; /* Spacing between elements */
+  align-items: flex-start; /* Aligning items to the top */
+  width: 100%; /* Added width for better responsiveness */
+}
+
+.subheading {
+  color: #52227c;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 3rem;
+}
+.subheading:hover {
+  transform: scale(1.05);
+}
+
