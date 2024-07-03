@@ -139,7 +139,7 @@ footer {
 </div> -->
 <div class="container-fluid pt-12 d-flex flex-row justify-content-center">
   <div class="flip-container p-0">
-    <div class="flipper" id="flipper">
+    <div class="flipper" id="flipper1">
 
     <img src="suslife/sound.png" class="image front" alt="Sound Image">
     <div class="image back p-9 border border-[#ffff] text-center items-center justify-content-center">    
@@ -211,7 +211,7 @@ style="
     </div>
   </div>
   <div class="flip-container pt-0">
-    <div class="flipper" id="flipper">
+    <div class="flipper" id="flipper2">
       <img src="suslife/ideaslide.png" class="image front" alt="Front Image">
       <img src="suslife/homepage.png" class="image back border border-[#ffff]" alt="Back Image">
     </div>
@@ -220,9 +220,12 @@ style="
 
 
   <script>
-    document.getElementById('flipper').addEventListener('click', function() {
+    document.getElementById('flipper1').addEventListener('click', function() {
       this.classList.toggle('flip');
     });
+    document.getElementById('flipper2').addEventListener('click', function() {
+    this.classList.toggle('flip');
+  });
   </script>
   <script>
     function draftEmail() {
