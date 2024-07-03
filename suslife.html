@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <script src="https://cdn.tailwindcss.com"></script>
+  
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" 
+      crossorigin="anonymous">
+        <!-- Include Bootstrap and Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<!-- Include Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"></script>
+
+    <title>SusLife</title>
+    <style>
+      *{
+        background-color: #025939;
+  
+      }
+      header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; Adjust as needed */
+    }
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: auto; */
+      /* padding-top: 30px; */
+      /* padding-bottom: 0; */
+      flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+      padding-top: 2rem; 
+    }
+
+    .center-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 20px; /* Adjust the value for more or less rounding */
+      margin: 0.5rem; 
+    }
+    .flip-container {
+      perspective: 1000px;
+      display: inline-block;
+      margin: 0.5rem; /* Adjust margin between flip containers */
+
+    }
+
+    .flipper {
+      position: relative;
+      width: 300px;
+      height: auto;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .flipper.flip {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height:auto;
+      backface-visibility: hidden;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      height:500px;
+      width:auto;
+    }
+
+    .image {
+      width: 300px;
+      height: auto;      
+      border-radius: 10px; /* Adjust the value for more or less rounding */
+      margin-right: 1rem; /* Adjust margin between images */
+
+    }
+
+footer {
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    color: #282828;
+
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    color: #282828;
+  }
+    </style>
+  </head>
+<body class="">
+  <header class="text-center justify-center items-center flex-col">
+  <img src="suslife/suslifetext.png" class="card-img-top text-center justify-center items-center pt-24" alt="suslife text" style="width: 400px; height: auto; ">
+  
+  <div class="text-[#ffff] pt-2 font-sans text-italics">
+    an app that gamifies sustainable lifestyle choices
+  </div> 
+
+ </header>
+<!-- 
+ <div class="container-fluid pt-12 flex-row justify-center space-x-4 ">
+
+ <div class="p-0">
+  <img src="suslife/sound.png" class="image " alt="Front Image">
+
+</div>
+ <div class="center-container justify-center ">
+
+  <div class="flip-container pt-0">
+    <div class="flipper" id="flipper">
+      <img src="suslife/ideaslide.png" class="image front" alt="Front Image">
+      <img src="suslife/homepage.png" class="image back border border-[#ffff] h-min w-min" alt="Back Image">
+    </div>
+  </div>
+ </div>
+</div> -->
+<div class="container-fluid pt-12 d-flex flex-row justify-content-center">
+  <div class="flip-container p-0">
+    <div class="flipper" id="flipper">
+
+    <img src="suslife/sound.png" class="image front" alt="Sound Image">
+    <div class="image back p-9 border border-[#ffff] text-center items-center justify-content-center">    
+      <h2 class="text-[#ffff] text-5xl pb-9">Sign up for our waitlist!</h2>
+      <!-- <form id="waitlistForm">
+          <label for="name floatingInput" class="text-[#ffff] mt-4 text-xl font-sans">Name:</label>
+          <input type="text" class="form-control" id="floatingInput" placeholder="Sussed Out" required>
+
+          <label for="email floatingInput" class="text-[#ffff] mt-4 text-xl font-sans">Email address</label>
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+          
+          <button type="submit" class="btn btn-light px-4 mt-9 text-xl">Sign Up</button>
+      </form> -->
+      <button  onclick="draftEmail()" class="btn btn-light shadow outline-none hover:outline-[#72CC98] px-4 mt-9 text-xl">Join</button>
+      <div
+    class="socials"
+    style="display: flex; flex-direction: column; justify-content: center"
+  >
+    <a
+      href="https://www.instagram.com/suslifeapp/"
+      target="_blank"
+      style="
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+      "
+    >
+      <i class="fa fa-instagram" style="font-size: 20px; margin-right: 5px"></i>
+@suslifeapp    </a>
+<a
+href="https://www.instagram.com/sarahtoninwrites/"
+target="_blank"
+style="
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+"
+>
+<i class="fa fa-instagram" style="font-size: 20px; margin-right: 5px"></i>
+@sarahtoninwrites    </a>
+    <a
+      href="https://x.com/sarahtonincodes"
+      target="_blank"
+      style="
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+      "
+    >
+      <i
+      class="fa fa-twitter"
+              style="font-size: 20px; margin-right: 5px"
+      ></i>
+      @sarahtonincodes    </a>
+  </div>
+    </div>
+    </div>
+  </div>
+  <div class="flip-container pt-0">
+    <div class="flipper" id="flipper">
+      <img src="suslife/ideaslide.png" class="image front" alt="Front Image">
+      <img src="suslife/homepage.png" class="image back border border-[#ffff]" alt="Back Image">
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    document.getElementById('flipper').addEventListener('click', function() {
+      this.classList.toggle('flip');
+    });
+  </script>
+  <script>
+    function draftEmail() {
+        // Replace placeholders with actual email content
+        const to = 'suslifeapp@gmail.com';
+        const subject = 'SusLife Waitlist';
+        const body = 'hi sarah \n im [NAME] and im interested in trying out SusLife when it comes out! hmu \n ttyl';
+
+        // Construct mailto URI
+        const mailtoURI = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Open default email client with the drafted email
+        window.location.href = mailtoURI;
+    }
+</script>
+   <!-- <script>
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        databaseURL: "YOUR_DATABASE_URL",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Reference to the Firebase database
+    const database = firebase.database();
+
+    // Handle form submission
+    document.getElementById('waitlistForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        // Get input values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+
+        // Save data to Firebase
+        database.ref('waitlist').push({
+            name: name,
+            email: email
+        }).then(() => {
+            alert('Thank you! You have been added to the waitlist.');
+            // Clear form after submission
+            document.getElementById('waitlistForm').reset();
+        }).catch(error => {
+            console.error('Error adding to waitlist:', error);
+            alert('Oops! Something went wrong. Please try again later.');
+        });
+    });
+</script> -->
+
+<!-- <footer class="container-fluid text-center justify-center items-center  color-black">
+  <div
+    class="socials"
+    style="display: flex; flex-direction: row; justify-content: center"
+  >
+    <a
+      href="https://www.instagram.com/bothered.png/"
+      target="_blank"
+      style="
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+      "
+    >
+      <i class="fa fa-instagram" style="font-size: 20px; margin-right: 5px"></i>
+      @bothered.png
+    </a>
+    <a
+      href="https://www.linkedin.com/in/sarah-saiyed-805bb3250/"
+      target="_blank"
+      style="
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+      "
+    >
+      <i
+        class="fa fa-linkedin-square"
+        style="font-size: 20px; margin-right: 5px"
+      ></i>
+      Sarah Saiyed
+    </a>
+    <a
+      href="https://x.com/sarahtonincodes"
+      target="_blank"
+      style="
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+      "
+    >
+      <i
+      class="fa fa-twitter"
+              style="font-size: 20px; margin-right: 5px"
+      ></i>
+      me on x
+    </a>
+  </div>
+  <p>Copyright &copy; 2024 by sarahtonin</p>
+</footer> -->
+</body>
+</html> 
