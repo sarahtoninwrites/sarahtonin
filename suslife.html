@@ -63,7 +63,9 @@
       margin: 0.5rem; /* Adjust margin between flip containers */
 
     }
-
+.a{
+  color:#72CC98;
+}
     .flipper {
       position: relative;
       width: 300px;
@@ -85,14 +87,21 @@
 
     .back {
       transform: rotateY(180deg);
-      height:500px;
-      width:auto;
+      /* height:500px;
+      width:auto; */
     }
 
     .image {
       width: 300px;
       height: auto;      
       border-radius: 10px; /* Adjust the value for more or less rounding */
+      margin-right: 1rem; /* Adjust margin between images */
+
+    }
+    .waitlistimg{
+height:533px;
+width:auto;
+border-radius: 10px; /* Adjust the value for more or less rounding */
       margin-right: 1rem; /* Adjust margin between images */
 
     }
@@ -109,6 +118,11 @@ footer {
     font-size: 0.9rem;
     color: #282828;
   }
+  @media (max-width: 768px) {
+      .text-5xl {
+        font-size: 2.25rem; /* Adjust font size for smaller screens */
+      }
+    }
     </style>
   </head>
 <body class="">
@@ -120,30 +134,13 @@ footer {
   </div> 
 
  </header>
-<!-- 
- <div class="container-fluid pt-12 flex-row justify-center space-x-4 ">
-
- <div class="p-0">
-  <img src="suslife/sound.png" class="image " alt="Front Image">
-
-</div>
- <div class="center-container justify-center ">
-
-  <div class="flip-container pt-0">
-    <div class="flipper" id="flipper">
-      <img src="suslife/ideaslide.png" class="image front" alt="Front Image">
-      <img src="suslife/homepage.png" class="image back border border-[#ffff] h-min w-min" alt="Back Image">
-    </div>
-  </div>
- </div>
-</div> -->
 <div class="container-fluid pt-12 d-flex flex-row justify-content-center">
   <div class="flip-container p-0">
     <div class="flipper" id="flipper1">
 
-    <img src="suslife/sound.png" class="image front" alt="Sound Image">
+    <img src="suslife/waitlist.png" class="waitlistimg front" alt="Waitlist Image">
     <div class="image back p-9 border border-[#ffff] text-center items-center justify-content-center">    
-      <h2 class="text-[#ffff] text-5xl pb-9">Sign up for our waitlist!</h2>
+      <h2 class="text-[#ffff] text-5xl pb-9">Sign up for our waitlist</h2>
       <!-- <form id="waitlistForm">
           <label for="name floatingInput" class="text-[#ffff] mt-4 text-xl font-sans">Name:</label>
           <input type="text" class="form-control" id="floatingInput" placeholder="Sussed Out" required>
@@ -153,7 +150,7 @@ footer {
           
           <button type="submit" class="btn btn-light px-4 mt-9 text-xl">Sign Up</button>
       </form> -->
-      <button  onclick="draftEmail()" class="btn btn-light shadow outline-none hover:outline-[#72CC98] px-4 mt-9 text-xl">Join</button>
+      <button  onclick="draftEmail()" class="btn btn-light shadow outline-none hover:outline-[#72CC98] px-4 mt-9 text-3xl">Join</button>
       <div
     class="socials"
     style="display: flex; flex-direction: column; justify-content: center"
@@ -162,7 +159,7 @@ footer {
       href="https://www.instagram.com/suslifeapp/"
       target="_blank"
       style="
-        color: black;
+        color: #9feabe;
         text-decoration: none;
         font-size: 15px;
         display: flex;
@@ -177,7 +174,7 @@ footer {
 href="https://www.instagram.com/sarahtoninwrites/"
 target="_blank"
 style="
-  color: black;
+  color: #9feabe;
   text-decoration: none;
   font-size: 15px;
   display: flex;
@@ -192,7 +189,7 @@ style="
       href="https://x.com/sarahtonincodes"
       target="_blank"
       style="
-        color: black;
+        color: #9feabe;
         text-decoration: none;
         font-size: 15px;
         display: flex;
@@ -281,6 +278,7 @@ style="
 </script> -->
 
 <!-- <footer class="container-fluid text-center justify-center items-center  color-black">
+
   <div
     class="socials"
     style="display: flex; flex-direction: row; justify-content: center"
@@ -342,5 +340,8 @@ style="
   </div>
   <p>Copyright &copy; 2024 by sarahtonin</p>
 </footer> -->
+<!-- <div class="bg-[#72CC98] h-96 pt-24">
+
+</div> -->
 </body>
 </html> 
