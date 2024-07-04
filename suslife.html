@@ -38,6 +38,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width:100%;
       /* height: 100vh; Adjust as needed */
     }
     .center-container {
@@ -122,11 +123,51 @@ footer {
       .text-5xl {
         font-size: 2.25rem; /* Adjust font size for smaller screens */
       }
+      .maincont{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        /* flex-wrap:unset; */
+            }
+            .flip-container{
+              max-width: 200px;
+              height:auto;
+
+            }
+            .image{
+              max-width: 200px;
+              height:auto;
+
+            }
+            .waitlistimg{
+              max-width: 200px;
+              height:auto;
+
+}
+.front{
+                width: 100%;
+                height:auto;
+              }
+              .back{
+                width: 100%;
+                height:auto;
+              }
+              .header{
+align-items: center;              }
+                  /* .maincont .flip-container{
+        padding-top: 20px;
+        flex-direction: column;
+      }
+      .flip-container .second{
+        margin-top: 500px;
+      }  */
+
     }
     </style>
   </head>
 <body class="">
-  <header class="text-center justify-center items-center flex-col">
+  <header class=" container-fluid justify-center items-center flex-col">
   <img src="suslife/suslifetext.png" class="card-img-top text-center justify-center items-center pt-24" alt="suslife text" style="width: 400px; height: auto; ">
   
   <div class="text-[#ffff] pt-2 font-sans text-italics">
@@ -134,7 +175,7 @@ footer {
   </div> 
 
  </header>
-<div class="container-fluid pt-12 d-flex flex-row justify-content-center">
+<div class="maincont container-fluid pt-12 d-flex flex-row justify-content-center">
   <div class="flip-container p-0">
     <div class="flipper" id="flipper1">
 
@@ -150,7 +191,7 @@ footer {
           
           <button type="submit" class="btn btn-light px-4 mt-9 text-xl">Sign Up</button>
       </form> -->
-      <button  onclick="draftEmail()" class="btn btn-light shadow outline-none hover:outline-[#72CC98] px-4 mt-9 text-3xl">Join</button>
+      <button  onclick="draftEmail()" class="btn btn-light shadow outline-none hover:outline-[#72CC98] px-4 mt-9 text-xl">Join</button>
       <div
     class="socials"
     style="display: flex; flex-direction: column; justify-content: center"
@@ -208,7 +249,7 @@ style="
     </div>
   </div>
   <div class="flip-container pt-0">
-    <div class="flipper" id="flipper2">
+    <div class="flipper second" id="flipper2">
       <img src="suslife/ideaslide.png" class="image front" alt="Front Image">
       <img src="suslife/homepage.png" class="image back border border-[#ffff]" alt="Back Image">
     </div>
