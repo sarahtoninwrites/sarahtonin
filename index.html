@@ -172,72 +172,99 @@
     .carousel-item {
       width: 500px; /* Adjusted height for better layout */
     }
-  
     .recent-essay {
-      width: 80%;
-      margin: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    /* Styles for the recent-box */
-    .recent-box {
-      margin-top: 30px;
-      margin-bottom: 30px;
-  
-      width: 80%;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      padding-left: 0;
-      text-decoration: none;
-    }
-  
-    /* Styles for the image */
-    .essay-image {
-      width: 400px;
-      height: 200px;
-      padding-right: 50px;
-    }
-  
-    /* Styles for the recent-content */
-    .recent-content {
-      flex: 1;
-      text-align: left;
-      background-color: whitesmoke;
-    }
-    .recent-box{
-      background-color: whitesmoke;
-  
-    }
-  
-    /* Styles for the heading */
-    .essay-title {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
-  
-    /* Styles for the paragraph */
-    .essay-description {
-      font-size: 1.1rem;
-      color: #666;
-      line-height: 1.6;
-      margin-top: 0;
-    }
-  
-    /* Hover effect for the recent-box */
-    .recent-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 6px whitesmoke;
-    }
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the recent-box */
+.recent-box {
+  margin: 30px 0;
+  width: 80%;
+  height: auto; /* Set height to auto for responsiveness */
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background-color: whitesmoke;
+}
+
+/* Styles for the image */
+.essay-image {
+  width: 100%; /* Make image responsive */
+  max-width: 400px; /* Set a max-width to prevent it from getting too large */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add margin for spacing on smaller screens */
+}
+
+/* Styles for the recent-content */
+.recent-content {
+  flex: 1;
+  text-align: left;
+  background-color: whitesmoke;
+}
+
+/* Styles for the heading */
+.essay-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Styles for the paragraph */
+.essay-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+/* Hover effect for the recent-box */
+.recent-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px whitesmoke;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .recent-box {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    text-align: center; /* Center-align text */
+  }
+
+  .essay-image {
+    margin: 0 auto 20px; /* Center the image and add bottom margin */
+    width: 100%; /* Ensure image takes full width on small screens */
+    max-width: 100%; /* Remove max-width restriction */
+  }
+
+  .recent-content {
+    text-align: center; /* Center-align the content */
+  }
+
+  .recent-essay {
+    width: 100%; /* Adjust container width for smaller screens */
+    margin: 50px 0; /* Adjust margins for smaller screens */
+  }
+
+  .essay-title {
+    font-size: 1.25rem; /* Slightly reduce title font size on smaller screens */
+  }
+
+  .essay-description {
+    font-size: 1rem; /* Slightly reduce description font size */
+  }
+}
+
   
     .additional {
       margin-top: 30px;
@@ -487,39 +514,45 @@
     </article>
   </div>
   <div class="container-fluid bg-[#282828] items-center text-center justify-center">
-    <article
-    >
-    <h1 class="text-7xl font-serif text-center align-items-center justify-center mt-9 text-[#e1b3b3]">some essays </h1>
+    <article>
+      <h1 class="text-7xl font-serif text-center align-items-center justify-center mt-9 text-[#e1b3b3]">
+        my work.
+      </h1>
   
       <div class="container-fluid recent-essay mt-9">
-        <a href="articleaye.html" class="recent-box">
-          <img
-            src="IMG/aurtur.jpg"
-            class="essay-image"
-          />
+        <a href="pdfs/Dementia.html" class="recent-box">
+          <img src="IMG/stage.png" class="essay-image" />
           <div class="recent-content">
-            <h2 class="essay-title">Objective Morality</h2>
+            <h2 class="essay-title">Dementia Prediction Using Machine Learning</h2>
             <p class="essay-description">
-              What do we mean when we define things as right or wrong? Who
-              decides?
+              Multiple techniques utilized for data imputation, pre-processing, and data transformation to build a suitable database to train our model. Na¨ıve Bayes (NB), Logistic Regression (LR), Decision Tree (DT), K-Nearest Neighbour (KNN), Gradient Boost, XGBoost and LightGBM
+
             </p>
           </div>
         </a>
-        <a href="#" class="recent-box">
-          <img
-            src="IMG/spongebob.jpg"
-            class="essay-image"
-          />
+        <a href="pdfs/transport.html" class="recent-box">
+          <img src="IMG/work.png" class="essay-image" />
+          <div class="recent-content">
+            <h2 class="essay-title"> Smart Transport for Accessibility</h2>
+            <p class="essay-description">
+              Performed Literature Survey and Designed a CPS model to address accessibility issues in Public Transport, specifically in India. A real-time solution that caters to special needs, relies on sensor-based feedback and live computations from our database and prioritizes the safety and comfort of passengers. Tech: CPP, Microcontroller interfacing
+
+            </p>
+          </div>
+        </a>
+        <!-- <a href="#" class="recent-box">
+          <img src="IMG/spongebob.jpg" class="essay-image" />
           <div class="recent-content">
             <h2 class="essay-title">SpongeBob's Resume</h2>
             <p class="essay-description">
               Why on earth would you hire an animated sponge? Click to find out!
             </p>
           </div>
-        </a>
+        </a> -->
       </div>
     </article>
   </div>
+  
   
   <footer class="container-fluid text-center justify-center items-center bg-[#ffff] color-black">
     <div

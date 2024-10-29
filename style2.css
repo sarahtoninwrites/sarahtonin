@@ -1,0 +1,133 @@
+*{
+  background-color: #025939;
+
+}
+header {
+display: flex;
+justify-content: center;
+align-items: center;
+width:100%;
+/* height: 100vh; Adjust as needed */
+}
+.center-container {
+display: flex;
+justify-content: center;
+align-items: center;
+/* height: auto; */
+/* padding-top: 30px; */
+/* padding-bottom: 0; */
+flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+padding-top: 2rem; 
+}
+
+.center-container img {
+width: 300px;
+height: auto;
+border-radius: 20px; /* Adjust the value for more or less rounding */
+margin: 0.5rem; 
+}
+.flip-container {
+perspective: 1000px;
+display: inline-block;
+margin: 0.5rem; /* Adjust margin between flip containers */
+
+}
+.a{
+color:#72CC98;
+}
+.flipper {
+position: relative;
+width: 300px;
+height: auto;
+transform-style: preserve-3d;
+transition: transform 0.6s;
+}
+
+.flipper.flip {
+transform: rotateY(180deg);
+}
+
+.front, .back {
+position: absolute;
+width: 100%;
+height:auto;
+backface-visibility: hidden;
+}
+
+.back {
+transform: rotateY(180deg);
+/* height:500px;
+width:auto; */
+}
+
+.image {
+width: 300px;
+height: auto;      
+border-radius: 10px; /* Adjust the value for more or less rounding */
+margin-right: 1rem; /* Adjust margin between images */
+
+}
+.waitlistimg{
+height:533px;
+width:auto;
+border-radius: 10px; /* Adjust the value for more or less rounding */
+margin-right: 1rem; /* Adjust margin between images */
+
+}
+
+footer {
+padding: 10px;
+margin: 0;
+width: 100%;
+color: #282828;
+
+}
+
+footer p {
+font-size: 0.9rem;
+color: #282828;
+}
+@media (max-width: 768px) {
+.text-5xl {
+  font-size: 2.25rem; /* Adjust font size for smaller screens */
+}
+.maincont{
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  /* flex-wrap:unset; */
+      }
+      /* .flip-container{
+        max-width: 200px;
+        height:auto;
+
+      }
+      .image{
+        max-width: 200px;
+        height:auto;
+
+      }
+      .waitlistimg{
+        max-width: 200px;
+        height:auto; */
+
+}
+.front{
+          width: 100%;
+          height:auto;
+        }
+        .back{
+          width: 100%;
+          height:auto;
+        }
+        .header{
+align-items: center;              }
+            /* .maincont .flip-container{
+  padding-top: 20px;
+  flex-direction: column;
+}
+.flip-container .second{
+  margin-top: 500px;
+}  */
+

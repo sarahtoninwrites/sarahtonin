@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sarahtonin</title>
+    <!-- <link href="style.css" rel="stylesheet" /> -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: whitesmoke;
+        color: #222;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 1200px; /* Increased max-width for better layout */
+        margin: 0 auto;
+        padding: 20px;
+        display: flex; /* Added flex display */
+        justify-content: center; /* Centering content horizontally */
+        align-items: flex-start; /* Aligning items to the top */
+      }
+
+      .top {
+        background-color: #110904;
+        color: #e1b3b3;
+        padding: 40px;
+        margin-bottom: 40px;
+        width: 100%;
+      }
+
+      .website-name {
+        font-size: 5rem;
+        margin-top: 20px;
+        text-transform: lowercase;
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px;
+        font-family: sans-serif;
+        font-weight: 1;
+      }
+      .website-name a {
+        color: #e1b3b3;
+        text-decoration: none;
+        font-family: serif;
+      }
+
+      .website-name:hover {
+        /* font-style: italic; */
+        transform: scale(1.05);
+      }
+
+      .menu {
+        margin-top: 20px;
+        padding: 5px;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 10px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        transition: color 0.3s ease;
+
+        padding: 5px;
+      }
+
+      .menu a:hover {
+        /* transform: scale(1.05); */
+        color: #b8cadd;
+      }
+
+      .main-body {
+        margin-top: 150px;
+        margin-bottom: 40px;
+        display: flex; /* Added flex display */
+        justify-content: space-between; /* Spacing between elements */
+        align-items: flex-start; /* Aligning items to the top */
+        width: 100%; /* Added width for better responsiveness */
+      }
+
+      .subheading {
+        color: #52227c;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-family: serif;
+        font-weight: 100;
+        text-align: center;
+        font-size: 3rem;
+      }
+      .subheading:hover {
+        transform: scale(1.05);
+      }
+
+      .guide {
+        background-color: whitesmoke;
+        /* border: 1px solid white; */
+        margin: 60px;
+        border-radius: 50px;
+        padding: 20px;
+        text-align: left;
+        margin-bottom: 30px;
+        width: calc(40% - 20px); /* Adjusted width for better layout */
+        /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.22); */
+        transition: all 0.5s;
+      }
+
+      .guide ol {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .guide li {
+        /* font-size: 1.1rem; */
+        margin-bottom: 10px;
+        font-size: larger;
+      }
+
+      .guide li strong {
+        font-weight: bold;
+      }
+      .guide span {
+        font-size: 70px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-align: right;
+      }
+
+      .carousel-container {
+        width: calc(50% - 20px); /* Adjusted width for better layout */
+        margin-left: 40px; /* Added margin for spacing */
+      }
+
+      .carousel {
+        width: 500px; /* Adjusted height for better layout */
+      }
+
+      .carousel-item {
+        width: 500px; /* Adjusted height for better layout */
+      }
+
+      .recent-essay {
+        width: 80%;
+        margin: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Styles for the recent-box */
+      .recent-box {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        width: 80%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        padding-left: 0;
+        text-decoration: none;
+      }
+
+      /* Styles for the image */
+      .essay-image {
+        width: 400px;
+        height: 200px;
+        padding-right: 50px;
+      }
+
+      /* Styles for the recent-content */
+      .recent-content {
+        flex: 1;
+        text-align: left;
+      }
+
+      /* Styles for the heading */
+      .essay-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      /* Styles for the paragraph */
+      .essay-description {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-top: 0;
+      }
+
+      /* Hover effect for the recent-box */
+      .recent-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .additional {
+        margin-top: 30px;
+        border-top: 1px solid black;
+        padding: 50px;
+      }
+
+      .related {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+      }
+
+      .related li {
+        margin-bottom: 20px;
+      }
+
+      .related img {
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+
+      .related a {
+        text-decoration: none;
+        color: #52227c;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      footer {
+        background-color: #282828;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        background-color: black; /* Change background color to black */
+        border-color: grey; /* Change border color to grey */
+        color: grey; /* Change text color to grey */
+        width: 20px;
+      }
+
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        background-color: grey; /* Change background color to grey on hover */
+        color: black; /* Change text color to black on hover */
+      }
+    </style>
+  </head>
+  <body class="container-fluid">
+    <!-- Header Section -->
+    <header class="container-fluid top">
+      <h1 class="website-name">
+        <a href="newtrial.html" style="margin-bottom: 0">sarahtonin</a>
+      </h1>
+      <h6 style="color: whitesmoke">
+        where i talk in circles and you're at the centre <3
+      </h6>
+      <!-- <div class="menu">
+        <a href="sponge.html">Spongebob</a>
+        <a href="poem.html">Poem</a>
+      </div> -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+            style="
+              display: flex;
+              justify-content: center;
+              flex-direction: row;
+              align-items: center;
+            "
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="sponge.html">SpongeBob</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="poem.html">Poem</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- PDF Embed Section -->
+    <main class="flex-grow p-10">
+      <embed
+        src="Paper_SmartPublicTransportAccessibility.pdf"
+        type="application/pdf"
+        class="w-full h-[600px] border border-gray-300 rounded-md shadow-md"
+      />
+    </main>
+
+    <!-- Navigation Section -->
+    <nav class="flex justify-center gap-8 my-4">
+      <a href="index.html" class="text-blue-500 hover:text-blue-700">Main Page</a>
+      <a href="#" class="text-blue-500 hover:text-blue-700">Top</a>
+    </nav>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-4 text-center">
+      <p>&copy; 2024 by Sarahtonin</p>
+      <p>
+        Follow on Instagram:
+        <a
+          href="https://www.instagram.com/bothered.png/"
+          target="_blank"
+          class="text-blue-400 hover:text-blue-600"
+          >@bothered.png</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
