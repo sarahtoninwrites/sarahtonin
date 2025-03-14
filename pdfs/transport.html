@@ -19,194 +19,210 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-      * {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      body {
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: whitesmoke;
-        color: #222;
-        line-height: 1.6;
+        background-color: #f7f7f7;
+        color: #333;
         text-align: center;
+      
       }
-
+      .top {
+        background-color: #282828;
+          color: #e1b3b3;
+          padding: 40px;
+          margin:0px;
+          margin-bottom: 40px;
+      
+          width: 100%;
+        }
+      
+        .website-name {
+          font-size: 5rem;
+          margin-top: 20px;
+          text-transform: lowercase;
+          cursor: pointer;
+          display: inline-block;
+          padding: 10px;
+          font-family: sans-serif;
+          font-weight: 1;
+        }
+        .website-name a {
+          color: #e1b3b3;
+          text-decoration: none;
+          font-family: serif;
+        }
+      
+        .website-name:hover {
+          /* font-style: italic; */
+          transform: scale(1.05);
+        }
+      
+        .menu {
+          margin-top: 20px;
+          padding: 5px;
+        }
+      
+        .menu a {
+          text-decoration: none;
+          color: #fff;
+          margin: 0 10px;
+          font-size: 1.2rem;
+          font-weight: 300;
+          transition: color 0.3s ease;
+      
+          padding: 5px;
+        }
+      
+        .menu a:hover {
+          /* transform: scale(1.05); */
+          color: #b8cadd;
+        }
+        .subheading {
+          color: #52227c;
+          font-size: 1.5rem;
+          margin-bottom: 20px;
+          font-family: serif;
+          font-weight: 100;
+          text-align: center;
+          font-size: 3rem;
+        }
+        .subheading:hover {
+          transform: scale(1.05);
+        }
       .container {
-        max-width: 1200px; /* Increased max-width for better layout */
+        max-width: 800px;
         margin: 0 auto;
         padding: 20px;
-        display: flex; /* Added flex display */
-        justify-content: center; /* Centering content horizontally */
-        align-items: flex-start; /* Aligning items to the top */
       }
-
-      .top {
-        background-color: #110904;
-        color: #e1b3b3;
-        padding: 40px;
-        margin-bottom: 40px;
-        width: 100%;
-      }
-
-      .website-name {
-        font-size: 5rem;
-        margin-top: 20px;
-        text-transform: lowercase;
-        cursor: pointer;
-        display: inline-block;
-        padding: 10px;
-        font-family: sans-serif;
-        font-weight: 1;
-      }
-      .website-name a {
-        color: #e1b3b3;
-        text-decoration: none;
-        font-family: serif;
-      }
-
-      .website-name:hover {
-        /* font-style: italic; */
-        transform: scale(1.05);
-      }
-
-      .menu {
-        margin-top: 20px;
-        padding: 5px;
-      }
-
-      .menu a {
-        text-decoration: none;
-        color: #fff;
-        margin: 0 10px;
-        font-size: 1.2rem;
-        font-weight: 300;
-        transition: color 0.3s ease;
-
-        padding: 5px;
-      }
-
-      .menu a:hover {
-        /* transform: scale(1.05); */
-        color: #b8cadd;
-      }
-
-      .main-body {
-        margin-top: 150px;
-        margin-bottom: 40px;
-        display: flex; /* Added flex display */
-        justify-content: space-between; /* Spacing between elements */
-        align-items: flex-start; /* Aligning items to the top */
-        width: 100%; /* Added width for better responsiveness */
-      }
-
-      .subheading {
-        color: #52227c;
-        font-size: 1.5rem;
+      h1 {
+        font-size: 2.5rem;
         margin-bottom: 20px;
-        font-family: serif;
-        font-weight: 100;
-        text-align: center;
-        font-size: 3rem;
       }
-      .subheading:hover {
-        transform: scale(1.05);
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
       }
-
-      .guide {
-        background-color: whitesmoke;
-        /* border: 1px solid white; */
-        margin: 60px;
-        border-radius: 50px;
-        padding: 20px;
-        text-align: left;
+      .navbar-nav .bi{
+      color: white; /* Sets the color of the icons to white */
+      width:20px;
+      height:auto;
+      }
+      .container.about {
+      display: flex;
+      text-align:left;
+      width:90%;
+      }
+      
+      .text-container {
+      flex: 1;
+      margin-right: 20px; /* Adjust spacing between text and image */
+      width:350px;
+      }
+      
+      .profimage {
+      width: 350px; /* Adjust the width as needed */
+      height:auto;
+      border-radius: 100%;
+      }
+      .projects {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .card {
+        width: 400px;
         margin-bottom: 30px;
-        width: calc(40% - 20px); /* Adjusted width for better layout */
-        /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.22); */
-        transition: all 0.5s;
+        box-shadow: 0 4px 8px rgba(250, 203, 220, 0.1); /* Adjusted shadow */
+        transition: transform 0.3s ease-in-out;
       }
-
-      .guide ol {
-        margin-left: 20px;
-        margin-bottom: 20px;
+      
+      .card:hover {
+        transform: scale(1.05);
+        
       }
-
-      .guide li {
-        /* font-size: 1.1rem; */
-        margin-bottom: 10px;
-        font-size: larger;
+      
+      .card img {
+        max-width: 100%; /* Ensures image fits within the card */
+        height: auto; /* Maintains aspect ratio */
       }
-
-      .guide li strong {
+      
+      .card a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      
+      .mybutton {
+        padding: 10px 20px;
+        font-size: 1.6rem;
         font-weight: bold;
+        text-align: center;
+        background-color: #e1b3b3; /* Adjust to your preferred color */
+        color: #110904;
+        border: none;
+        border-radius: 999px; /* Large value to create rounded buttons */
+        transition: background-color 0.3s ease;
+        outline: 1px solid #110904;
       }
-      .guide span {
-        font-size: 70px;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        text-align: right;
+      
+      .mybutton:hover {
+        background-color: #110904; /* Adjust to your preferred hover color */
+        color:#e1b3b3;
+        outline: 1px solid #e1b3b3;
+        text-decoration: none;
+      
       }
-
-      .carousel-container {
-        width: calc(50% - 20px); /* Adjusted width for better layout */
-        margin-left: 40px; /* Added margin for spacing */
-      }
-
-      .carousel {
-        width: 500px; /* Adjusted height for better layout */
-      }
-
-      .carousel-item {
-        width: 500px; /* Adjusted height for better layout */
-      }
-
+      
       .recent-essay {
         width: 80%;
-        margin: 100px;
+        margin: 100px auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-
+      
       /* Styles for the recent-box */
       .recent-box {
-        margin-top: 30px;
-        margin-bottom: 30px;
-
+        margin: 30px 0;
         width: 80%;
-        height: 200px;
+        height: auto; /* Set height to auto for responsiveness */
         display: flex;
+        flex-wrap: wrap; /* Enable wrapping for smaller screens */
         align-items: center;
         border: 1px solid #ccc;
         border-radius: 8px;
         padding: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
-        padding-left: 0;
         text-decoration: none;
+        background-color: whitesmoke;
       }
-
+      
       /* Styles for the image */
       .essay-image {
-        width: 400px;
-        height: 200px;
-        padding-right: 50px;
+        width: 100%; /* Make image responsive */
+        max-width: 400px; /* Set a max-width to prevent it from getting too large */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add margin for spacing on smaller screens */
       }
-
+      
       /* Styles for the recent-content */
       .recent-content {
         flex: 1;
         text-align: left;
+        background-color: whitesmoke;
       }
-
+      
       /* Styles for the heading */
       .essay-title {
         font-size: 1.5rem;
         margin-bottom: 10px;
         color: #333;
       }
-
+      
       /* Styles for the paragraph */
       .essay-description {
         font-size: 1.1rem;
@@ -214,112 +230,69 @@
         line-height: 1.6;
         margin-top: 0;
       }
-
+      
       /* Hover effect for the recent-box */
       .recent-box:hover {
         transform: translateY(-5px);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px whitesmoke;
       }
-
-      .additional {
-        margin-top: 30px;
-        border-top: 1px solid black;
-        padding: 50px;
+      
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .recent-box {
+          flex-direction: column; /* Stack content vertically on smaller screens */
+          text-align: center; /* Center-align text */
+        }
+      
+        .essay-image {
+          margin: 0 auto 20px; /* Center the image and add bottom margin */
+          width: 100%; /* Ensure image takes full width on small screens */
+          max-width: 100%; /* Remove max-width restriction */
+        }
+      
+        .recent-content {
+          text-align: center; /* Center-align the content */
+        }
+      
+        .recent-essay {
+          width: 100%; /* Adjust container width for smaller screens */
+          margin: 50px 0; /* Adjust margins for smaller screens */
+        }
+      
+        .essay-title {
+          font-size: 1.25rem; /* Slightly reduce title font size on smaller screens */
+        }
+      
+        .essay-description {
+          font-size: 1rem; /* Slightly reduce description font size */
+        }
       }
-
-      .related {
-        list-style: none;
-        padding: 0;
-        text-align: left;
-      }
-
-      .related li {
-        margin-bottom: 20px;
-      }
-
-      .related img {
-        margin-right: 10px;
-        border-radius: 50%;
-      }
-
-      .related a {
-        text-decoration: none;
-        color: #52227c;
-        font-weight: bold;
-        font-size: 1.1rem;
-      }
-
       footer {
-        background-color: #282828;
-        color: #fff;
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-      }
-
-      footer p {
-        font-size: 0.9rem;
-      }
-      .carousel-control-prev,
-      .carousel-control-next {
-        background-color: black; /* Change background color to black */
-        border-color: grey; /* Change border color to grey */
-        color: grey; /* Change text color to grey */
-        width: 20px;
-      }
-
-      .carousel-control-prev:hover,
-      .carousel-control-next:hover {
-        background-color: grey; /* Change background color to grey on hover */
-        color: black; /* Change text color to black on hover */
-      }
-    </style>
+          padding: 10px;
+          margin: 0;
+          width: 100%;
+          color: #282828;
+      
+        }
+      
+        footer p {
+          font-size: 0.9rem;
+          color: #282828;
+        }
+      </style>
   </head>
   <body class="container-fluid">
     <!-- Header Section -->
-    <header class="container-fluid top">
+    <header class="container-fluid top text-center justify-center items-center">
       <h1 class="website-name">
-        <a href="../index.html" style="margin-bottom: 0">sarahtonin</a>
-      </h1>
-      <h6 style="color: whitesmoke">
-        where i talk in circles and you're at the centre <3
-      </h6>
-      <!-- <div class="menu">
-        <a href="sponge.html">Spongebob</a>
-        <a href="poem.html">Poem</a>
-      </div> -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse"
-            id="navbarNav"
-            style="
-              display: flex;
-              justify-content: center;
-              flex-direction: row;
-              align-items: center;
-            "
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">Main Page</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+          <a href="index.html" style="margin-bottom: 0">Sarah Saiyed</a>
+        </h1>
+        <h6 style="color: whitesmoke">
+          Aspiring Software and Game Developer | Mentee @Ubisoft | CSE Undergrad ITNU 2026 
+        </h6>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+        </nav>
+      </header>
 
     <!-- PDF Embed Section -->
     <main class="flex-grow p-10">
@@ -332,7 +305,7 @@
 
     <!-- Navigation Section -->
     <nav class="flex justify-center gap-8 my-4">
-      <a href="index.html" class="text-blue-500 hover:text-blue-700">Main Page</a>
+      <a href="../index.html" class="text-blue-500 hover:text-blue-700">Main Page</a>
       <a href="#" class="text-blue-500 hover:text-blue-700">Top</a>
     </nav>
 
